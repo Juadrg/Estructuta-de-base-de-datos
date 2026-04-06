@@ -19,3 +19,26 @@ Calcula su hash SHA-256
 Lo compara con el hash objetivo
 
 Cuando encuentra coincidencia, devuelve la secuencia correcta.
+
+
+Problema 2
+
+Descripcion:
+Dado el hash root de un arbol de Merkle, determinar el orden de las transacciones que lo generan.
+
+Reglas:
+
+Se usa SHA-256
+Las transacciones son conocidas
+Se debe encontrar el orden correcto
+
+Qué hace el programa:
+Genera todas las permutaciones posibles de las transacciones.
+Para cada orden:
+
+Calcula el hash de cada transaccion
+Construye el árbol de Merkle (combinando hashes por pares)
+Obtiene el hash root
+
+Luego compara ese resultado con el hash objetivo.
+Cuando coinciden, muestra el orden correcto.
